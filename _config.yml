@@ -1,7 +1,7 @@
 # Site settings
 title: Export My Contacts
 description: > # this means to ignore newlines until "baseurl:"
-  Export contacts from Gmail, Yahoo, Outlook.com, AOL, iCloud and several others to CSV
+  Export contacts from Gmail, Yahoo, Outlook.com, Linkedin, iCloud and others to CSV
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://www.exportmycontacts.com" # the base hostname & protocol for your site
 
