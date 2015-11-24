@@ -1,0 +1,42 @@
+<script type="text/javascript">
+
+    (function(u){
+        var d=document,s='script',a=d.createElement(s),m=d.getElementsByTagName(s)[0];
+        a.async=1;a.src=u;m.parentNode.insertBefore(a,m);
+    })('//api.cloudsponge.com/widget/{{ site.cloudsponge_key }}.js');
+
+    // This is where you can configure the behavior and style of the widget
+    // http://www.cloudsponge.com/developer/#the-contact-importer-widget
+    window.csPageOptions = {
+        mobile_render: true,
+        inlineOauth: true,
+        selectAccount: true, // Display account selection screen during the OAuth,
+        sources: ["gmail", "yahoo", "windowslive", "aol", "office365", "linkedin", "icloud"],
+        afterSubmitContacts:populateTextarea
+    };
+
+    function populateTextarea(contacts, source, owner) {
+
+        var contact, first_name, last_name, email, entry;
+        var emails = [];
+        var textarea = document.getElementById('contact_list');
+
+        // Format each contact properly
+        for (var i = 0; i < contacts.length; i++) {
+            contact = contacts[i];
+            first_name = contact.first_name.replace('"', '""');
+            last_name = contact.last_name.replace('"', '""');
+            email = contact.selectedEmail().replace('"', '""');
+            entry = '"' + first_name + '","' + last_name + '","' + email + '"';
+            if (emails.indexOf(entry) < 0) {
+                emails.push(entry);
+            }
+        }
+        // Dump everything into the textarea
+        textarea.value = "First Name,Last Name,Email\n" + emails.join("\n");
+
+        $('#contact_list').unbind("click").click(function(){ $(this).select();});
+
+    }
+
+</script>

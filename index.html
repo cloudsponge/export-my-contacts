@@ -1,1 +1,39 @@
-Hello World!
+---
+layout: default
+---
+
+<div class="inner cover">
+
+  <p class="lead">Click in the below icons to start importing from selected source to CSV:</p>
+
+  <p class="lead">
+
+    <a href="#" onclick="cloudsponge.launch('gmail')" title="Gmail" data-toggle="tooltip"><img src="{{ site.baseurl }}/img/contact_sources/gmail.png"/></a>
+
+    <a href="#" onclick="cloudsponge.launch('yahoo')" title="Yahoo" data-toggle="tooltip"><img src="{{ site.baseurl }}/img/contact_sources/yahoo.png"/></a>
+
+    <a href="#" onclick="cloudsponge.launch('windowslive')" title="Outlook.com" data-toggle="tooltip"><img src="{{ site.baseurl }}/img/contact_sources/outlook.com.png"/></a>
+
+    <a href="#" onclick="cloudsponge.launch('aol')" title="AOL" data-toggle="tooltip"><img src="{{ site.baseurl }}/img/contact_sources/aol.png"/></a>
+
+    <a href="#" onclick="cloudsponge.launch('office365')" title="Office365" data-toggle="tooltip"><img src="{{ site.baseurl }}/img/contact_sources/office365.png"/></a>
+
+    <a href="#" onclick="cloudsponge.launch('linkedin')" title="LinkedIn" data-toggle="tooltip"><img src="{{ site.baseurl }}/img/contact_sources/linkedin.png"/></a>
+
+    <a href="#" onclick="cloudsponge.launch('icloud')" title="iCloud" data-toggle="tooltip"><img src="{{ site.baseurl }}/img/contact_sources/icloud.png"/></a>
+
+  </p>
+
+  <p class="lead">
+
+    <textarea id="contact_list" readonly="readonly"></textarea>
+
+  </p>
+
+  <p class="social text-right">
+    <a href=""><i class="fa fa-twitter"></i></a>
+    <a href=""><i class="fa fa-facebook"></i></a>
+    <a href=""><i class="fa fa-google-plus"></i></a>
+  </p>
+
+</div>
