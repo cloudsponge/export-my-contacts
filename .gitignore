@@ -1,4 +1,5 @@
 _site
+_development.yml
 .sass-cache
 .idea
 .ruby-gemset
