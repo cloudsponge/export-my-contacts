@@ -5,7 +5,7 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://www.exportmycontacts.com" # the base hostname & protocol for your site
 
-cloudsponge_key: f37c1326177a11193ced84e4a22f6cd3f82f8497
+cloudsponge_key: wDw7vCjXjQeJBUmGp8hSCg
 
 # Build settings
 markdown: redcarpet
