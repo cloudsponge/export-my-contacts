@@ -3,15 +3,13 @@
     (function(u){
         var d=document,s='script',a=d.createElement(s),m=d.getElementsByTagName(s)[0];
         a.async=1;a.src=u;m.parentNode.insertBefore(a,m);
-    })('//api.cloudsponge.com/widget/{{ site.cloudsponge_key }}.js');
+    })('https://api.cloudsponge.com/widget/{{ site.cloudsponge_key }}.js');
 
     // This is where you can configure the behavior and style of the widget
     // http://www.cloudsponge.com/developer/#the-contact-importer-widget
     window.csPageOptions = {
-        mobile_render: true,
-        inlineOauth: true,
         selectAccount: true, // Display account selection screen during the OAuth,
-        sources: ["gmail", "yahoo", "windowslive", "aol", "office365", "linkedin", "icloud"],
+        sources: ["gmail", "yahoo", "outlookcom", "aol", "office365", "icloud"],
         afterSubmitContacts:populateTextarea
     };
 
